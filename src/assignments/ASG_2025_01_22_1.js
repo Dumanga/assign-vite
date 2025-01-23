@@ -1,6 +1,8 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import { Box, Button, Container, Typography } from "@mui/material";
+import safe from "../assets/sounds/safe.mp3";
+import boom from "../assets/sounds/boom.mp3";
 
 const Minesweeper = () => {
   const gridSize = 10;
@@ -33,6 +35,11 @@ const Minesweeper = () => {
     setOpened(newOpened);
   }, []);
 
+  const playSound = (src) => {
+    const audio = new Audio(src);
+    audio.play();
+  };
+
   const handleClick = (row, col) => {
     if (ended || opened[row][col]) return; // return if game ended or already opened cell
 
@@ -44,9 +51,11 @@ const Minesweeper = () => {
 
     if (value === 0) {
       // Bomb blast  - booom
+      playSound(boom);
       setScore((prevScore) => prevScore - 5);
     } else {
       // safe cell
+      playSound(safe)
       setScore((prevScore) => prevScore + value);
     }
 
