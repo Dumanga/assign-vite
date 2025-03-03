@@ -115,15 +115,20 @@ const Home = () => {
       description: "ASG_2025_02_13_1",
       location: "/ASG_2025_02_13_1",
     },{
-      id: 21,
+      id: 22,
       title: "Assignment 22",
       description: "ASG_2025_02_17_1",
       location: "/ASG_2025_02_17_1",
     },{
-      id: 21,
+      id: 23,
       title: "Assignment 23",
       description: "ASG_2025_02_27_1",
       location: "/ASG_2025_02_27_1",
+    },{
+      id: 24,
+      title: "Assignment 24",
+      description: "ASG_2025_03_03_1",
+      location: "/ASG_2025_03_03_1",
     },
   ];
 
